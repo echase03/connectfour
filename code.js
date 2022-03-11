@@ -1,7 +1,5 @@
 "use strict";
-// Your Code Here.
 
-//Just make a function to remove all the animation classes from the btns
 const clearClasses = function () {
   btnOne.classList.remove("ball-one-black");
   btnOne.classList.remove("ball-two-black");
@@ -102,7 +100,7 @@ const hideBtns = function () {
   btnContainer.classList.add("hidden");
 };
 
-//grab elemnets
+//grab elements
 const btnContainer = document.querySelector("#btn-holder");
 const gameBoard = document.querySelector("#game-board");
 const playBtn = document.querySelector("#btn-start");
@@ -111,8 +109,7 @@ const colorBtns = document.querySelectorAll(".btn-slot");
 const lines = document.querySelectorAll("hr");
 let text = message.textContent;
 
-//grabing the buttons
-//add event listeners for each
+//grabbing the buttons
 const btnOne = document.getElementById("btn-one");
 const btnTwo = document.getElementById("btn-two");
 const btnThree = document.getElementById("btn-three");
@@ -153,7 +150,7 @@ const renderBoard = function () {
   }
 };
 
-//Functions to switch users turn
+//Functions to switch user's turn
 const redMove = function () {
   for (const btn of colorBtns) {
     btn.classList.remove("red-turn");
@@ -180,7 +177,7 @@ playBtn.addEventListener("click", function () {
     [0, 0, 0, 0, 0, 0, 0],
     [0, 0, 0, 0, 0, 0, 0],
   ];
-  //make rhe hidden thing a function cause you need it below
+
   //refactor
   for (const line of lines) {
     line.classList.remove("hidden");
@@ -200,7 +197,7 @@ playBtn.addEventListener("click", function () {
   clearClasses();
 });
 
-//Function to add to event listeners
+//Function to add event listeners
 const userMove = function (num) {
   if (totalMoves % 2 === 0) {
     redMove();
